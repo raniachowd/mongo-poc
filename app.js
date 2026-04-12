@@ -1,5 +1,5 @@
 //entry point of your backend, wires everything together (DB + routes), keeps logic out of server startup
-// kept app.js minimal and only used for bootstrapping server and registering routes, following separation of concerns
+// kept app.js minimal and only used for bootstrapping server (starting it up and getting it to ready to run) and registering routes (telling express which url should go to which logic), following separation of concerns
 const express = require("express");
 require("./db");
 

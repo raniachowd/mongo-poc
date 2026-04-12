@@ -1,4 +1,4 @@
-//stores financial data, enables aggregation (revenue analytics)
+//stores financial data, enables aggregation (revenue analytics) -- aggregation = advanced querying + data processing inside MongoDB
 const mongoose = require("mongoose");
 
 const billingSchema = new mongoose.Schema({
