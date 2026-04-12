@@ -1,14 +1,16 @@
+//demonstrates relationships in mongodb, uses ref for population, connects patients and doctors
 const mongoose = require("mongoose");
 
 const appointmentSchema = new mongoose.Schema({
-  patientId: mongoose.Schema.Types.ObjectId,
-  doctorId: mongoose.Schema.Types.ObjectId,
-  appointmentDate: Date,
-  status: String,
-
-  // embedded snapshot
-  doctorName: String,
-  specialty: String
+  patientId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Patient"
+  },
+  doctorId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Doctor"
+  },
+  date: Date
 });
 
 module.exports = mongoose.model("Appointment", appointmentSchema);

@@ -1,10 +1,10 @@
+//defines data structure (schema), enforces validation rules at db level, ensures consistent patient data
 const mongoose = require("mongoose");
 
 const patientSchema = new mongoose.Schema({
-  name: String,
-  email: { type: String, unique: true, index: true },
-  age: Number,
-  createdAt: { type: Date, default: Date.now }
+  name: { type: String, required: true },
+  age: { type: Number, required: true },
+  disease: { type: String, required: true }
 });
 
 module.exports = mongoose.model("Patient", patientSchema);

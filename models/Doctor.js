@@ -1,9 +1,9 @@
+// represents doctor entities, used for relational linking with appointments (using objectids)
 const mongoose = require("mongoose");
 
 const doctorSchema = new mongoose.Schema({
-  name: String,
-  specialty: String,
-  availableSlots: [String]
+  name: { type: String, required: true },
+  specialty: { type: String, required: true }
 });
 
 module.exports = mongoose.model("Doctor", doctorSchema);

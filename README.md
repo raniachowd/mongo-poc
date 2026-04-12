@@ -3,6 +3,10 @@
 ##Overview
 A backend REST API built with Node.js, Express, and MongoDB to simulate a basic healthcare system.
 
+# I built a modular Node.js + MongoDB backend using MVC architecture.
+# I implemented schema validation, relational references using Mongoose populate, and aggregation pipelines for analytics. 
+# The system is structured for scalability with separated controllers, routes, and models.
+
 ##Features
 - Create Patients
 - Create Doctors
